@@ -8,13 +8,13 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common AOSP stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from tetris device
 $(call inherit-product, device/nothing/tetris/device.mk)
 
-PRODUCT_NAME := aosp_tetris
+PRODUCT_NAME := lineage_tetris
 PRODUCT_DEVICE := tetris
 PRODUCT_BRAND := Nothing
 PRODUCT_MANUFACTURER := Nothing
@@ -27,4 +27,29 @@ DEVICE_CODENAME := tetris
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildDesc="Tetris 15 AP3A.240905.015 2502082015 release-keys" \
     BuildFingerprint=Nothing/Tetris/Tetris:15/AP3A.240905.015.A2/2502082015:user/release-keys \
-    DeviceProduct=$(DEVICE_CODENAME)
+    DeviceProduct=$(DEVICE_CODENAME) \
+    RisingChipset="MediaTek Dimensity 7300" \
+    RisingMaintainer="schoosh"
+
+# RisingOS Flags
+
+# Maintainer
+RISING_MAINTAINER="schoosh"
+
+# Blur
+TARGET_ENABLE_BLUR := true
+
+# Launchers
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := true
+
+# Disable Aperture
+PRODUCT_NO_CAMERA := true
+
+# GMS Flags
+WITH_GMS := true
+TARGET_INCLUDE_GOOGLE_DIALER := true
+TARGET_PREBUILT_GOOGLE_CAMERA := true
+
+PRODUCT_PACKAGES += \
+    LatinIMEGooglePrebuilt
