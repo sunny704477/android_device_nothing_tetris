@@ -7,7 +7,7 @@ rm -rf vendor/nothing
 rm -rf kernel/nothing
 rm -rf device/nothing/tetris-kernel
 
-git clone https://github.com/NothingOSS/android_kernel_6.1_nothing_mt6878 kernel/nothing/tetris
+git clone https://github.com/SuperAviation001/android_kernel_nothing_tetris kernel/nothing/tetris
 
 git clone https://gitea.com/SuperAviation001/android_vendor_nothing_tetris vendor/nothing/tetris
 
