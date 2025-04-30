@@ -679,7 +679,6 @@ vendor/lib64/libmtkcam_ulog.so
 vendor/lib64/libmtkcam_zsl_customselector.so
 vendor/lib64/libmtkcm_ipc_dummy.so
 vendor/lib64/libmtkgpuserv.so
-vendor/lib64/libmtkperf_client_vendor.so
 vendor/lib64/libmvpu_wrapper.so
 vendor/lib64/libn3d_tuning.so
 vendor/lib64/libnoteengine.so
@@ -1490,7 +1489,6 @@ vendor/lib64/vendor.mediatek.hardware.gnss.batching-V1-ndk.so
 system_ext/bin/vtservice
 system_ext/etc/init/init.vtservice.rc
 -system_ext/framework/mediatek-common.jar:framework/mediatek-common.jar
--system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
 -system_ext/framework/mediatek-ims-base.jar:framework/mediatek-ims-base.jar
 system_ext/framework/mediatek-ims-extension-plugin.jar:framework/mediatek-ims-extension-plugin.jar
 system_ext/lib64/libcomutils.so
@@ -1501,7 +1499,6 @@ system_ext/lib64/libimsma_socketwrapper.so
 system_ext/lib64/libmtk_vt_service.so
 system_ext/lib64/libmtk_vt_wrapper.so
 system_ext/lib64/libmtk_vt_wrapper.so
-system_ext/lib64/libmtkperf_client.so
 system_ext/lib64/libsignal.so
 system_ext/lib64/libsink.so
 system_ext/lib64/libsource.so
@@ -1517,6 +1514,10 @@ vendor/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so
 
 # ImsService - from zahedan U
 -system_ext/priv-app/ImsService/ImsService.apk|e0390f357ce63afa3c1d4ff8f5d9258d6d4bc2f6
+
+# mediatek-framework - from Pacman V3.0-240617
+-system_ext/framework/mediatek-framework.jar:framework/mediatek-framework.jar
+# shasum c20440d02102fdb511be21cdcf9d13c97a44bea3
 
 # Keymint
 vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
@@ -2505,8 +2506,6 @@ vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-init.rc
 vendor/etc/init/vendor.mediatek.hardware.mtkpower@1.0-service.rc
 vendor/etc/task_profiles.json
 vendor/etc/vintf/manifest/mtkpower_applist-mtk-default.xml
-vendor/etc/vintf/manifest/power-mediatek.xml
-vendor/lib64/android.hardware.power-service-mediatek.so
 vendor/lib64/hw/power.default.so
 vendor/lib64/hw/vendor.mediatek.hardware.mtkpower-aidl-impl.so
 vendor/lib64/lib_power_applist.so
@@ -2516,9 +2515,6 @@ vendor/lib64/libpowerhal.so
 vendor/lib64/libpowerhalwrap_vendor.so
 vendor/lib64/vendor.mediatek.framework.mtksf_ext-V2-ndk.so
 vendor/lib64/vendor.mediatek.hardware.mtkpower-V1-ndk.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.1.so
-vendor/lib64/vendor.mediatek.hardware.mtkpower@1.2.so
 vendor/lib64/vendor.mediatek.hardware.mtkpower_applist-V1-ndk.so
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
 vendor/lib64/vendor.mediatek.hardware.power@2.0.so
